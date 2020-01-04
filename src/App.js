@@ -51,15 +51,17 @@ class App extends Component {
           Do some brilliant things by clicking the button!
         </h2>
 
-        <div id="button" style={styles.buttonContainer}>
+        <div id="button" style={styles.buttonContainer} onClick={this.showLyrics}>
           <div style={styles.button}>
             <div style={styles.buttonText}>
               Click me!
             </div>
           </div>
         </div>
-        <p id="rising_sun">
-          {this.state.displayLyrics ? lyrics : ''}
+        <p>
+          <pre id="rising_sun">
+            {this.state.displayLyrics ? lyrics : ''}
+          </pre>
         </p>
       </div>
     );
