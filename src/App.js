@@ -58,11 +58,9 @@ class App extends Component {
             </div>
           </div>
         </div>
-        <p>
-          <pre id="rising_sun">
-            {this.state.displayLyrics ? lyrics : ''}
-          </pre>
-        </p>
+        <pre id="rising_sun">
+          {this.state.displayLyrics ? lyrics : ''}
+        </pre>
       </div>
     );
   }
