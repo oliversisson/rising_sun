@@ -1,5 +1,5 @@
 import React from 'react';
-import {render} from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import App from './App';
 
 test('renders click me button', () => {
@@ -9,10 +9,9 @@ test('renders click me button', () => {
 });
 
 test('clicks click me button', () => {
-  const lyrics = "They call the Fake Rising Sun";
   const {getByText} = render(<App />);
   const buttonElement = getByText(/click me/i);
   fireEvent.click(buttonElement);
-  expect(screen.getByText(lyrics)).toBeInTheDocument()
+  expect(getByText(/they call the rising sun/i)).toBeInTheDocument()
 
 });
